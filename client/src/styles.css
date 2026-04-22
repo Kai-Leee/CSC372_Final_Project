@@ -1,0 +1,333 @@
+:root {
+  --bg: #f2f3f5;
+  --text: #222;
+  --muted: #5b616e;
+  --panel: #ffffff;
+  --border: #d8dde7;
+  --btn: #1f2937;
+  --btn-text: #ffffff;
+  --accent: #0f766e;
+  --up: #0f766e;
+  --down: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(148, 163, 184, 0.18), transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(15, 118, 110, 0.14), transparent 35%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.auth-shell,
+.app-shell {
+  width: min(1200px, 94vw);
+  margin: 32px auto;
+}
+
+.auth-card,
+.panel,
+.sub-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.auth-card {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 24px;
+}
+
+.auth-card h1 {
+  margin: 0 0 8px;
+}
+
+.auth-card p {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.auth-toggle,
+.tab-row {
+  display: flex;
+  gap: 8px;
+}
+
+.auth-toggle {
+  margin-bottom: 16px;
+}
+
+.auth-toggle button,
+.tab-row button,
+.header-actions button {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.is-active {
+  background: var(--btn);
+  color: var(--btn-text);
+}
+
+.auth-form,
+.details-form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  padding: 10px 12px;
+}
+
+.primary-btn {
+  border: none;
+  background: var(--btn);
+  color: var(--btn-text);
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.error-text {
+  margin: 0;
+  color: var(--down);
+  font-size: 0.9rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.welcome-line {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.panel {
+  padding: 14px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.sub-panel {
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.sub-panel h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.up {
+  color: var(--up);
+}
+
+.down {
+  color: var(--down);
+}
+
+.add-task-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.task-controls {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.watchlist-controls {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.add-symbol-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.watchlist-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-btn {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.tag-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.task-list li {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.task-list li:last-child {
+  border-bottom: 0;
+}
+
+.task-list li.selected {
+  background: rgba(15, 118, 110, 0.12);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-row input {
+  width: 16px;
+  height: 16px;
+}
+
+.task-meta {
+  margin-top: 6px;
+  display: flex;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.inline-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.news-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.news-list li {
+  color: var(--muted);
+}
+
+.news-list a {
+  text-decoration: none;
+}
+
+.news-list a:hover {
+  text-decoration: underline;
+}
+
+.empty {
+  color: var(--muted);
+  cursor: default;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
